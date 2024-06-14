@@ -45,13 +45,13 @@ function handle_schedulify_form() {
 			'appointment_date' => sanitize_text_field( $_POST['appointment_date'] ),
 		] );
 
-		// Send email notification
+		// Send email notification.
 		$to = sanitize_email( $_POST['email'] );
 		$subject = 'Appointment Confirmation';
 		$message = 'Your appointment is confirmed for ' . sanitize_text_field( $_POST['appointment_date'] );
 		wp_mail( $to, $subject, $message );
 
-		// Redirect to thank you page
+		// Redirect to thank you page.
 		wp_redirect( add_query_arg( 'booking', 'success', wp_get_referer() ) );
 		exit;
 	}

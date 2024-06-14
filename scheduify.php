@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Schedulify
-Plugin URI: https://yourwebsite.com
+Plugin URI:
 Description: A simple appointment booking plugin.
 Version: 1.0
 Author: Christopher Mucheke
-Author URI: https://yourwebsite.com
+Author URI:
 License: GPL2
 */
 
@@ -13,11 +13,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-// Include required files
+// Include required files.
 include_once ( plugin_dir_path( __FILE__ ) . 'includes/admin.php' );
 include_once ( plugin_dir_path( __FILE__ ) . 'includes/frontend.php' );
 
-// Activation hook
+// Activation hook.
 register_activation_hook( __FILE__, 'schedulify_install' );
 
 function schedulify_install() {
